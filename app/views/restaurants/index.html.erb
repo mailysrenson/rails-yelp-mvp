@@ -1,0 +1,12 @@
+<div class="container my-3">
+  <h2>List of restaurants</h2>
+  <ol>
+    <% @restaurants.each do |resto|%>
+      <li><%= link_to "#{resto.name}", "restaurants/#{resto.id}" %></li>
+    <% end %>
+  </ol>
+  <br>
+  <p class="btn btn-success"><%= link_to "Add a restaurant", "/restaurants/new" %></p>
+</div>
+
+

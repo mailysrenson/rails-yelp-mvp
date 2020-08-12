@@ -1,0 +1,9 @@
+<div class="container my-3">
+  <h2>Add a review for <%=@restaurant.name %></h2>
+
+  <%= simple_form_for [ @restaurant, @review ] do |f| %>
+    <%= f.input :content %>
+    <%= f.input :rating , collection: Review::RATING_SCORE%>
+    <%= f.submit "Submit review", class: "btn btn-primary" %>
+  <% end %>
+</div>
